@@ -219,7 +219,7 @@ function gameUpdate() {
 
     var i, j, n;
 
-    var wasSomeoneBirth = false;
+    var wasOneBorn = false;
 
     for ( i = 0; i < maxColumn; i++) {
         for ( j = 0; j < maxRow; j++) {
@@ -234,7 +234,7 @@ function gameUpdate() {
                 cells[n].isLive = true;
                 cells[n].mustbirth = false;
                 birthsCounter ++;
-                wasSomeoneBirth = true;
+                wasOneBorn = true;
             }
         }
     }
@@ -275,7 +275,7 @@ function gameUpdate() {
         }
     }
 
-    if(wasSomeoneBirth)
+    if(wasOneBorn)
         generationsCounter ++;
 
 }
